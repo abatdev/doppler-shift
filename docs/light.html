@@ -1,0 +1,49 @@
+<!DOCTYPE HTML>
+<html xml:lang="en" lang="en">
+<head>
+<title>CSE442 | Final Project</title>
+<script src="https://d3js.org/d3.v7.min.js"></script>
+<script src="https://d3js.org/d3-scale-chromatic.v1.min.js"></script>
+<link rel="stylesheet" href="light.css">
+</head>
+<body id="light">
+<div class="content">
+<section class="title">
+<a href="/">Doppler Shift in Action</a>
+</section>
+
+<section style="margin-bottom: 100px;">
+<p>
+    <strong>Team Members</strong>: Boyoung Park, Jiamae Wang, Nicco Garofalo, Abigail Batinga
+</p>
+</section>
+
+<section>
+<!--<div id="transition"></div>-->
+<div >
+    <div style="position: relative;">
+        <div id="wave">
+        </div>
+
+        <div id="sun" class="popup" onclick="sunToggle()">
+            <img src="sun.png" width="100%" height="100%">
+            <span class="popuptext" id="sunTut">Testing Sun</span>
+        </div>
+    </div>
+    <div class="popup" onclick="sliderToggle()">
+        <input type="range" min="-100" max="100" value="0" class="slider" id="velocitySlider">
+        <button id="reset-btn">Reset</button>
+        <!--<span class="popuptext" id="sliderTut">Testing Sun</span>-->
+    </div>
+    <h3 style="width:340px;color:aliceblue;padding-top:20px;" class="popup" onclick="wpsToggle()">Wavelengths per second: <span id="wps">3</span>
+        <span class="popuptext" id="wpsTut">Testing waves per second</span>
+    </h3>
+    <div id="colorbar" class="popup" onclick="colorbarToggle()" style="width:420px;">
+        <span class="popuptext" id="colorbarTut">Testing colorbar</span>
+    </div>
+</div>
+</section>
+
+<script src="light.js"></script>
+</body>
+</html> 

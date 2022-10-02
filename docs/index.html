@@ -1,0 +1,99 @@
+<!DOCTYPE HTML>
+<meta charset="utf-8">
+<html xml:lang="en" lang="en">
+<head>
+    <title>CSE442 | Final Project</title>
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <script src="https://d3js.org/d3-scale-chromatic.v1.min.js"></script>
+    <script src="https://d3js.org/d3.v4.js"></script>
+    <link rel="stylesheet" href="sound.css">
+    <link rel="stylesheet" href="light.css">
+</head>
+<body style="font-family: trebuchet ms" id="light">
+    <h1 style = "color: white"> The Doppler Effect </h1>
+    <h5 style = "color: white"> Team members: Boyoung, Jiamae, Snehal, Nicco, Abigail </h5>
+    <p style = "color: white">The Doppler effect was named after physicist Christian Doppler in 1842 and represents the change in frequency of a wave in relation to an observer who is moving relative to the wave source. </p>
+    <p style = "color: white">A real life example of the Doppler effect is the change of pitch you hear when a car horn approaches and recedes from an observer. This could be like a siren. The frequency we hear is higher when it's approaching us and lower as it leaves.</p>
+    
+    <section>
+        <div id = "soundContainer">
+        </div>
+        
+        <div >
+            <input type="range" min="1" max="400" value="100" class="soundSlider" id="soundSlider" list="tickmarks">
+            <p class = "mps" id = "mps"></p>
+        </div>
+        
+        <script src="sound.js"></script>
+    </section>
+    
+    <!-- Todo: Why does starry.js breaks by adding #soundContainer? -->
+    <!-- <div id="bgDiv"></div> -->
+    <!-- <script type="text/javascript" src="starry.js"></script> -->
+  
+    <p style = "color: white"> Let's listen to an example of a passing vehicle, click the play button</p>
+    <audio controls>
+            <source src="https://upload.wikimedia.org/wikipedia/commons/9/90/Speeding-car-horn_doppler_effect_sample.ogg" type="audio/ogg">
+        </audio>
+    
+    <p style = "color: white"> The reason for this is that when the source of the waves moves towards the observer, the wave crest emitted is closer than the previous wave so it takes slightly less time to reach the observer than the previous one. </p>
+    <img src="https://upload.wikimedia.org/wikipedia/commons/9/90/Dopplerfrequenz.gif">
+    
+    <p style = "color: white">The Doppler effect not only applies to the sounds we hear but also the colors we see. Its application on electromagnetic waves is used in astronomy to measure the speed at which stars and galaxies are approaching or receding from us. This results in what is called a blueshift or a redshift. This happens on a very small scale, meaning there would not be a noticeable difference in visible light to the unaided eye.</p>
+    <p style = "color: white"> But what would this look like if we could see it? </p>
+
+    <section>
+
+<div style="height: 200px;color: white">Try clicking on different elements for explanations of what's going on!</div>
+
+<!--<div id="transition"></div>-->
+<div >
+    <div style="position: relative;">
+        <div id="wave">
+        </div>
+
+        <div id="sun" class="popup" onclick="sunToggle()">
+            <img src="sun.png" width="100%" height="100%">
+            <span class="popuptext" id="sunTut">In this Visualization, the sun acts as a constant source of light emitting electromagnetic waves with a wavelength of approximately 507 nanometers. (The human eye perceives this as green)</span>
+        </div>
+    </div>
+    <div>
+        <input type="range" min="-100" max="100" value="0" class="slider" id="velocitySlider">
+        <button id="reset-btn">Reset</button>
+    </div>
+    <h3 style="width:340px;color:aliceblue;margin-top:80px;" class="popup" onclick="wpsToggle()">Wavelengths per second: <span id="wps">3</span>
+        <span class="popuptext" id="wpsTut">As you change the observer's velocity, the number of wavelengths they pass each second also changes</span>
+    </h3>
+    <div style="display:flex;">
+        <div id="colorbar" style="width:420px;"></div>
+        <p style = "color: white"><br>Because the observer perceives a different frequency of electromagnetic radiation, the color they see changes too.
+            <br>So, even though the light itself doesn't change, a moving observer perceives it differently.
+            <br>As you move towards the light source, it is called a "blue shift" and it is called a "red shift" when you move away from the source.</p>
+    </div>
+</div>
+</section>
+<!--
+<section>
+<h2>Design Decisions</h2>
+<em>[TODO: add a rationale for your design decisions.
+    How did you choose your particular visual encodings and interaction techniques?
+    What alternatives did you consider and how did you arrive at your ultimate choices?]</em>
+</section>
+
+<section>
+<h2>Development Process</h2>
+<em>[TODO: describe how the work was split among the team members.
+    Include a commentary on the development process, including answers to the following questions: 
+    Roughly how much time did you spend developing your application (in people-hours)? 
+    What aspects took the most time?]</em>
+</section>-->
+
+<div class="footer" style="padding-top: 30px;">
+<a href="https://courses.cs.washington.edu/courses/cse442/22wi/">CSE 442 Data Visualization</a>
+<a href="http://www.washington.edu">University of Washington</a>
+</div>
+</div>
+
+<script src="light.js"></script>
+</body>
+</html> 
